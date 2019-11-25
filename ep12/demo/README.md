@@ -26,14 +26,27 @@ Before proceeding, make sure you have your AWS credentials setup.
 
 Also, go to package.json and append your name to all the occurrences of the bucket name.
 
+### Prerequesites
+
+Install:
+- [yarn](https://yarnpkg.com/en/docs/install#mac-stable)  
+- [docker](https://www.docker.com/products/docker-desktop)  
+- [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)  
+- [aws-sam-cli](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)  
+- [cfn-lint](https://github.com/aws-cloudformation/cfn-python-lint) (optional)  
+
 ### Prepare - run once
 
-`npm run create-bucket`
+`yarn install`
+
+`yarn build`
+
+`yarn create-bucket`
 
 ### Package
 
-`npm run package`
+`yarn package`
 
 ### Deploy
 
-`npm run deploy`
+`yarn deploy`
