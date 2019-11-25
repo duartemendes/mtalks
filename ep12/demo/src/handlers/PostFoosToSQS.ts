@@ -1,4 +1,4 @@
-import "source-map-support";
+import "source-map-support/register";
 import { APIGatewayEvent, APIGatewayProxyResult } from "aws-lambda";
 import { SQS } from "aws-sdk";
 

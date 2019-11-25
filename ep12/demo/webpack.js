@@ -1,5 +1,4 @@
 const { join } = require("path");
-const { BannerPlugin } = require("webpack");
 
 /**
  * Generic configuration for Webpack.
@@ -31,11 +30,4 @@ module.exports = {
   },
   externals: [/^aws-sdk/i],
   devtool: "inline-source-map",
-  plugins: [
-    new BannerPlugin({
-      banner: 'require("source-map-support").install();',
-      raw: true,
-      entryOnly: false
-    })
-  ]
 };

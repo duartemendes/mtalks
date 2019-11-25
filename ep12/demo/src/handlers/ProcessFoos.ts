@@ -1,4 +1,4 @@
-import "source-map-support";
+import "source-map-support/register";
 import { SQSEvent } from "aws-lambda";
 
 interface Foo {
