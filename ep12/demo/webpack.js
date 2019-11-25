@@ -30,4 +30,5 @@ module.exports = {
   },
   externals: [/^aws-sdk/i],
   devtool: "inline-source-map",
+  mode: development,
 };
