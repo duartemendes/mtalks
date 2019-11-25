@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Serverless demo for the mtalk @mindera",
   "scripts": {
-    "build": "npx webpack --config webpack.js",
+    "build": "webpack --config webpack.js",
     "watch": "yarn build --watch",
     "start": "sam local start-api -n fixtures/envVars.json -p 5000 -t template.yaml",
     "dev": "concurrently \"yarn:watch\" \"yarn:start\"",
     "function": "sam local invoke --env-vars fixtures/envVars.json",
-    "function:PostFoosToSQS": "npm run function -- --event fixtures/foo.json PostFoosToSQS",
-    "function:ProcessFoos": "npm run function -- --event fixtures/records.json ProcessFoos",
+    "function:PostFoosToSQS": "yarn function --event fixtures/foo.json PostFoosToSQS",
+    "function:ProcessFoos": "yarn function --event fixtures/records.json ProcessFoos",
     "create-bucket": "aws s3 mb s3://mtalk-servesrless-demo-2019",
     "package": "sam package --template template.yaml --s3-bucket mtalk-serverless-demo-2019 --output-template-file packaged.yaml",
     "deploy": "sam deploy --template-file packaged.yaml --stack-name mtalk-serverless-demo-2019 --capabilities CAPABILITY_IAM"
