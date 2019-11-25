@@ -1,16 +1,13 @@
 Description: Serverless demo
 Transform: AWS::Serverless-2016-10-31
 
-Globals:
-  Function:
-    CodeUri: ./dist
-    Runtime: nodejs12.x
-
 Resources:
   PostFoosToSQS:
     Type: AWS::Serverless::Function
     Properties:
+      CodeUri: ./dist
       Handler: PostFoosToSQSHandler.default
+      Runtime: nodejs12.x
       MemorySize: 128
       Timeout: 5
       Policies:
@@ -29,7 +26,9 @@ Resources:
   ProcessFoos:
     Type: AWS::Serverless::Function
     Properties:
+      CodeUri: ./dist
       Handler: ProcessFoosHandler.default
+      Runtime: nodejs12.x
       MemorySize: 128
       Timeout: 5
       Events:

@@ -11,7 +11,7 @@
     "function:PostFoosToSQS": "yarn function --event fixtures/foo.json PostFoosToSQS",
     "function:ProcessFoos": "yarn function --event fixtures/records.json ProcessFoos",
     "create-bucket": "aws s3 mb s3://mtalk-serverless-demo-2019",
-    "package": "sam package --template template.yaml --s3-bucket mtalk-serverless-demo-2019 --output-template-file packaged.yaml",
+    "package": "sam package --debug --template template.yaml --s3-bucket mtalk-serverless-demo-2019 --output-template-file packaged.yaml",
     "deploy": "sam deploy --template-file packaged.yaml --stack-name mtalk-serverless-demo-2019 --capabilities CAPABILITY_IAM"
   },
   "author": "Duarte Mendes <duarte.mendes@mindera.com> & Paulo Andrade <paulo.andrade@mindera.com>",
