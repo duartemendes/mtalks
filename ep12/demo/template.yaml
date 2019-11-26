@@ -8,7 +8,7 @@ Resources:
       CodeUri: ./dist
       Handler: PostFoosToSQSHandler.default
       Runtime: nodejs12.x
-      MemorySize: 128
+      MemorySize: 256
       Timeout: 5
       Policies:
         - SQSSendMessagePolicy:
@@ -17,7 +17,7 @@ Resources:
         FoosApiPostEvent:
           Type: Api
           Properties:
-            Path: /foos/{foo}
+            Path: /foos
             Method: POST
       Environment:
         Variables:
