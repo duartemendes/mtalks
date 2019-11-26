@@ -1,4 +1,4 @@
-# \#12 Serverless is not magic
+# \#12 Serverless is not magic - 26/11/19
 
 ## Authors
 
